@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 print('Hello Databricks')
 
 # COMMAND ----------
@@ -12,6 +16,10 @@ df=spark.read.format('csv').option('header','true').load('abfss://datalake@dacst
 # COMMAND ----------
 
 df.show()
+
+# COMMAND ----------
+
+df.collect()
 
 # COMMAND ----------
 
